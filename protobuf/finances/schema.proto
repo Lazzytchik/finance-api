@@ -5,17 +5,77 @@ option go_package = "github.com/lazzytchik/finance-api/grpc";
 package helloworld;
 
 // The greeting service definition.
-service Greeter {
-  // Sends a greeting
-  rpc SayHello (HelloRequest) returns (HelloReply) {}
+service Finances {
+    rpc IncomeAdd (IncomeAddRequest) returns (IncomeAddReply) {}
+    rpc SpendAdd (SpendAddRequest) returns (SpendAddReply) {}
+    rpc MonthStat (MonthStatRequest) returns (MonthStatReply) {}
 }
 
 // The request message containing the user's name.
-message HelloRequest {
-  string name = 1;
+message IncomeAddRequest {
+    IncomeCategoryId category_id = 1;
+    string title = 2;
+    double sum = 3;
+    string date = 4;
+    string author = 5;
 }
 
-// The response message containing the greetings
-message HelloReply {
-  string message = 1;
+message IncomeAddReply {
+    string message = 1;
+}
+
+enum IncomeCategoryId {
+    NO_INCOME_CATEGORY = 0;
+    SALARY = 1;
+    TRANSFERS = 2;
+    SELLING = 3;
+    GIFTS = 4;
+}
+
+message SpendAddRequest {
+    BudgetCategoryId category_id = 1;
+    string title = 2;
+    double sum = 3;
+    string date = 4;
+    string author = 5;
+}
+
+message SpendAddReply {
+    string message = 1;
+}
+
+enum BudgetCategoryId {
+    NOT_BUDGET_CATEGORY = 0;
+    FOOD = 1;
+    ENTERTAIMENT = 2;
+    DOMESTIC = 3;
+    RENT = 4;
+    MORGAGE = 5;
+    HEALTH_CARE = 6;
+    TRANSPORT = 7;
+}
+
+message MonthStatRequest {
+    int64 year = 1;
+    Month month = 2;
+}
+
+message MonthStatReply {
+    string message = 1;
+}
+
+enum Month {
+    NO_MONTH = 0;
+    JANUARY = 1;
+    FEBURARY = 2;
+    MARCH = 3;
+    APRIL = 4;
+    MAY = 5;
+    JUNE = 6;
+    JULY = 7;
+    AUGUST = 8;
+    SEPTEMBER = 9;
+    OCTOBER = 10;
+    NOVEMBER = 11;
+    DECEMBER = 12;
 }

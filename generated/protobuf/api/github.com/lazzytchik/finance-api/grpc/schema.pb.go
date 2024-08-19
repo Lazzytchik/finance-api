@@ -20,17 +20,219 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+type IncomeCategoryId int32
+
+const (
+	IncomeCategoryId_NO_INCOME_CATEGORY IncomeCategoryId = 0
+	IncomeCategoryId_SALARY             IncomeCategoryId = 1
+	IncomeCategoryId_TRANSFERS          IncomeCategoryId = 2
+	IncomeCategoryId_SELLING            IncomeCategoryId = 3
+	IncomeCategoryId_GIFTS              IncomeCategoryId = 4
+)
+
+// Enum value maps for IncomeCategoryId.
+var (
+	IncomeCategoryId_name = map[int32]string{
+		0: "NO_INCOME_CATEGORY",
+		1: "SALARY",
+		2: "TRANSFERS",
+		3: "SELLING",
+		4: "GIFTS",
+	}
+	IncomeCategoryId_value = map[string]int32{
+		"NO_INCOME_CATEGORY": 0,
+		"SALARY":             1,
+		"TRANSFERS":          2,
+		"SELLING":            3,
+		"GIFTS":              4,
+	}
+)
+
+func (x IncomeCategoryId) Enum() *IncomeCategoryId {
+	p := new(IncomeCategoryId)
+	*p = x
+	return p
+}
+
+func (x IncomeCategoryId) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (IncomeCategoryId) Descriptor() protoreflect.EnumDescriptor {
+	return file_protobuf_finances_schema_proto_enumTypes[0].Descriptor()
+}
+
+func (IncomeCategoryId) Type() protoreflect.EnumType {
+	return &file_protobuf_finances_schema_proto_enumTypes[0]
+}
+
+func (x IncomeCategoryId) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use IncomeCategoryId.Descriptor instead.
+func (IncomeCategoryId) EnumDescriptor() ([]byte, []int) {
+	return file_protobuf_finances_schema_proto_rawDescGZIP(), []int{0}
+}
+
+type BudgetCategoryId int32
+
+const (
+	BudgetCategoryId_NOT_BUDGET_CATEGORY BudgetCategoryId = 0
+	BudgetCategoryId_FOOD                BudgetCategoryId = 1
+	BudgetCategoryId_ENTERTAIMENT        BudgetCategoryId = 2
+	BudgetCategoryId_DOMESTIC            BudgetCategoryId = 3
+	BudgetCategoryId_RENT                BudgetCategoryId = 4
+	BudgetCategoryId_MORGAGE             BudgetCategoryId = 5
+	BudgetCategoryId_HEALTH_CARE         BudgetCategoryId = 6
+	BudgetCategoryId_TRANSPORT           BudgetCategoryId = 7
+)
+
+// Enum value maps for BudgetCategoryId.
+var (
+	BudgetCategoryId_name = map[int32]string{
+		0: "NOT_BUDGET_CATEGORY",
+		1: "FOOD",
+		2: "ENTERTAIMENT",
+		3: "DOMESTIC",
+		4: "RENT",
+		5: "MORGAGE",
+		6: "HEALTH_CARE",
+		7: "TRANSPORT",
+	}
+	BudgetCategoryId_value = map[string]int32{
+		"NOT_BUDGET_CATEGORY": 0,
+		"FOOD":                1,
+		"ENTERTAIMENT":        2,
+		"DOMESTIC":            3,
+		"RENT":                4,
+		"MORGAGE":             5,
+		"HEALTH_CARE":         6,
+		"TRANSPORT":           7,
+	}
+)
+
+func (x BudgetCategoryId) Enum() *BudgetCategoryId {
+	p := new(BudgetCategoryId)
+	*p = x
+	return p
+}
+
+func (x BudgetCategoryId) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (BudgetCategoryId) Descriptor() protoreflect.EnumDescriptor {
+	return file_protobuf_finances_schema_proto_enumTypes[1].Descriptor()
+}
+
+func (BudgetCategoryId) Type() protoreflect.EnumType {
+	return &file_protobuf_finances_schema_proto_enumTypes[1]
+}
+
+func (x BudgetCategoryId) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use BudgetCategoryId.Descriptor instead.
+func (BudgetCategoryId) EnumDescriptor() ([]byte, []int) {
+	return file_protobuf_finances_schema_proto_rawDescGZIP(), []int{1}
+}
+
+type Month int32
+
+const (
+	Month_NO_MONTH  Month = 0
+	Month_JANUARY   Month = 1
+	Month_FEBURARY  Month = 2
+	Month_MARCH     Month = 3
+	Month_APRIL     Month = 4
+	Month_MAY       Month = 5
+	Month_JUNE      Month = 6
+	Month_JULY      Month = 7
+	Month_AUGUST    Month = 8
+	Month_SEPTEMBER Month = 9
+	Month_OCTOBER   Month = 10
+	Month_NOVEMBER  Month = 11
+	Month_DECEMBER  Month = 12
+)
+
+// Enum value maps for Month.
+var (
+	Month_name = map[int32]string{
+		0:  "NO_MONTH",
+		1:  "JANUARY",
+		2:  "FEBURARY",
+		3:  "MARCH",
+		4:  "APRIL",
+		5:  "MAY",
+		6:  "JUNE",
+		7:  "JULY",
+		8:  "AUGUST",
+		9:  "SEPTEMBER",
+		10: "OCTOBER",
+		11: "NOVEMBER",
+		12: "DECEMBER",
+	}
+	Month_value = map[string]int32{
+		"NO_MONTH":  0,
+		"JANUARY":   1,
+		"FEBURARY":  2,
+		"MARCH":     3,
+		"APRIL":     4,
+		"MAY":       5,
+		"JUNE":      6,
+		"JULY":      7,
+		"AUGUST":    8,
+		"SEPTEMBER": 9,
+		"OCTOBER":   10,
+		"NOVEMBER":  11,
+		"DECEMBER":  12,
+	}
+)
+
+func (x Month) Enum() *Month {
+	p := new(Month)
+	*p = x
+	return p
+}
+
+func (x Month) String() string {
+	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
+}
+
+func (Month) Descriptor() protoreflect.EnumDescriptor {
+	return file_protobuf_finances_schema_proto_enumTypes[2].Descriptor()
+}
+
+func (Month) Type() protoreflect.EnumType {
+	return &file_protobuf_finances_schema_proto_enumTypes[2]
+}
+
+func (x Month) Number() protoreflect.EnumNumber {
+	return protoreflect.EnumNumber(x)
+}
+
+// Deprecated: Use Month.Descriptor instead.
+func (Month) EnumDescriptor() ([]byte, []int) {
+	return file_protobuf_finances_schema_proto_rawDescGZIP(), []int{2}
+}
+
 // The request message containing the user's name.
-type HelloRequest struct {
+type IncomeAddRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	CategoryId IncomeCategoryId `protobuf:"varint,1,opt,name=category_id,json=categoryId,proto3,enum=helloworld.IncomeCategoryId" json:"category_id,omitempty"`
+	Title      string           `protobuf:"bytes,2,opt,name=title,proto3" json:"title,omitempty"`
+	Sum        float64          `protobuf:"fixed64,3,opt,name=sum,proto3" json:"sum,omitempty"`
+	Date       string           `protobuf:"bytes,4,opt,name=date,proto3" json:"date,omitempty"`
+	Author     string           `protobuf:"bytes,5,opt,name=author,proto3" json:"author,omitempty"`
 }
 
-func (x *HelloRequest) Reset() {
-	*x = HelloRequest{}
+func (x *IncomeAddRequest) Reset() {
+	*x = IncomeAddRequest{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_protobuf_finances_schema_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -38,13 +240,13 @@ func (x *HelloRequest) Reset() {
 	}
 }
 
-func (x *HelloRequest) String() string {
+func (x *IncomeAddRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*HelloRequest) ProtoMessage() {}
+func (*IncomeAddRequest) ProtoMessage() {}
 
-func (x *HelloRequest) ProtoReflect() protoreflect.Message {
+func (x *IncomeAddRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_protobuf_finances_schema_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -56,20 +258,47 @@ func (x *HelloRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use HelloRequest.ProtoReflect.Descriptor instead.
-func (*HelloRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use IncomeAddRequest.ProtoReflect.Descriptor instead.
+func (*IncomeAddRequest) Descriptor() ([]byte, []int) {
 	return file_protobuf_finances_schema_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *HelloRequest) GetName() string {
+func (x *IncomeAddRequest) GetCategoryId() IncomeCategoryId {
 	if x != nil {
-		return x.Name
+		return x.CategoryId
+	}
+	return IncomeCategoryId_NO_INCOME_CATEGORY
+}
+
+func (x *IncomeAddRequest) GetTitle() string {
+	if x != nil {
+		return x.Title
 	}
 	return ""
 }
 
-// The response message containing the greetings
-type HelloReply struct {
+func (x *IncomeAddRequest) GetSum() float64 {
+	if x != nil {
+		return x.Sum
+	}
+	return 0
+}
+
+func (x *IncomeAddRequest) GetDate() string {
+	if x != nil {
+		return x.Date
+	}
+	return ""
+}
+
+func (x *IncomeAddRequest) GetAuthor() string {
+	if x != nil {
+		return x.Author
+	}
+	return ""
+}
+
+type IncomeAddReply struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -77,8 +306,8 @@ type HelloReply struct {
 	Message string `protobuf:"bytes,1,opt,name=message,proto3" json:"message,omitempty"`
 }
 
-func (x *HelloReply) Reset() {
-	*x = HelloReply{}
+func (x *IncomeAddReply) Reset() {
+	*x = IncomeAddReply{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_protobuf_finances_schema_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -86,13 +315,13 @@ func (x *HelloReply) Reset() {
 	}
 }
 
-func (x *HelloReply) String() string {
+func (x *IncomeAddReply) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*HelloReply) ProtoMessage() {}
+func (*IncomeAddReply) ProtoMessage() {}
 
-func (x *HelloReply) ProtoReflect() protoreflect.Message {
+func (x *IncomeAddReply) ProtoReflect() protoreflect.Message {
 	mi := &file_protobuf_finances_schema_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -104,12 +333,240 @@ func (x *HelloReply) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use HelloReply.ProtoReflect.Descriptor instead.
-func (*HelloReply) Descriptor() ([]byte, []int) {
+// Deprecated: Use IncomeAddReply.ProtoReflect.Descriptor instead.
+func (*IncomeAddReply) Descriptor() ([]byte, []int) {
 	return file_protobuf_finances_schema_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *HelloReply) GetMessage() string {
+func (x *IncomeAddReply) GetMessage() string {
+	if x != nil {
+		return x.Message
+	}
+	return ""
+}
+
+type SpendAddRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	CategoryId BudgetCategoryId `protobuf:"varint,1,opt,name=category_id,json=categoryId,proto3,enum=helloworld.BudgetCategoryId" json:"category_id,omitempty"`
+	Title      string           `protobuf:"bytes,2,opt,name=title,proto3" json:"title,omitempty"`
+	Sum        float64          `protobuf:"fixed64,3,opt,name=sum,proto3" json:"sum,omitempty"`
+	Date       string           `protobuf:"bytes,4,opt,name=date,proto3" json:"date,omitempty"`
+	Author     string           `protobuf:"bytes,5,opt,name=author,proto3" json:"author,omitempty"`
+}
+
+func (x *SpendAddRequest) Reset() {
+	*x = SpendAddRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protobuf_finances_schema_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *SpendAddRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SpendAddRequest) ProtoMessage() {}
+
+func (x *SpendAddRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_protobuf_finances_schema_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SpendAddRequest.ProtoReflect.Descriptor instead.
+func (*SpendAddRequest) Descriptor() ([]byte, []int) {
+	return file_protobuf_finances_schema_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *SpendAddRequest) GetCategoryId() BudgetCategoryId {
+	if x != nil {
+		return x.CategoryId
+	}
+	return BudgetCategoryId_NOT_BUDGET_CATEGORY
+}
+
+func (x *SpendAddRequest) GetTitle() string {
+	if x != nil {
+		return x.Title
+	}
+	return ""
+}
+
+func (x *SpendAddRequest) GetSum() float64 {
+	if x != nil {
+		return x.Sum
+	}
+	return 0
+}
+
+func (x *SpendAddRequest) GetDate() string {
+	if x != nil {
+		return x.Date
+	}
+	return ""
+}
+
+func (x *SpendAddRequest) GetAuthor() string {
+	if x != nil {
+		return x.Author
+	}
+	return ""
+}
+
+type SpendAddReply struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Message string `protobuf:"bytes,1,opt,name=message,proto3" json:"message,omitempty"`
+}
+
+func (x *SpendAddReply) Reset() {
+	*x = SpendAddReply{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protobuf_finances_schema_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *SpendAddReply) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SpendAddReply) ProtoMessage() {}
+
+func (x *SpendAddReply) ProtoReflect() protoreflect.Message {
+	mi := &file_protobuf_finances_schema_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SpendAddReply.ProtoReflect.Descriptor instead.
+func (*SpendAddReply) Descriptor() ([]byte, []int) {
+	return file_protobuf_finances_schema_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *SpendAddReply) GetMessage() string {
+	if x != nil {
+		return x.Message
+	}
+	return ""
+}
+
+type MonthStatRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Year  int64 `protobuf:"varint,1,opt,name=year,proto3" json:"year,omitempty"`
+	Month Month `protobuf:"varint,2,opt,name=month,proto3,enum=helloworld.Month" json:"month,omitempty"`
+}
+
+func (x *MonthStatRequest) Reset() {
+	*x = MonthStatRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protobuf_finances_schema_proto_msgTypes[4]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *MonthStatRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*MonthStatRequest) ProtoMessage() {}
+
+func (x *MonthStatRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_protobuf_finances_schema_proto_msgTypes[4]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use MonthStatRequest.ProtoReflect.Descriptor instead.
+func (*MonthStatRequest) Descriptor() ([]byte, []int) {
+	return file_protobuf_finances_schema_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *MonthStatRequest) GetYear() int64 {
+	if x != nil {
+		return x.Year
+	}
+	return 0
+}
+
+func (x *MonthStatRequest) GetMonth() Month {
+	if x != nil {
+		return x.Month
+	}
+	return Month_NO_MONTH
+}
+
+type MonthStatReply struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Message string `protobuf:"bytes,1,opt,name=message,proto3" json:"message,omitempty"`
+}
+
+func (x *MonthStatReply) Reset() {
+	*x = MonthStatReply{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_protobuf_finances_schema_proto_msgTypes[5]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *MonthStatReply) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*MonthStatReply) ProtoMessage() {}
+
+func (x *MonthStatReply) ProtoReflect() protoreflect.Message {
+	mi := &file_protobuf_finances_schema_proto_msgTypes[5]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use MonthStatReply.ProtoReflect.Descriptor instead.
+func (*MonthStatReply) Descriptor() ([]byte, []int) {
+	return file_protobuf_finances_schema_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *MonthStatReply) GetMessage() string {
 	if x != nil {
 		return x.Message
 	}
@@ -121,20 +578,84 @@ var File_protobuf_finances_schema_proto protoreflect.FileDescriptor
 var file_protobuf_finances_schema_proto_rawDesc = []byte{
 	0x0a, 0x1e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x66, 0x69, 0x6e, 0x61, 0x6e,
 	0x63, 0x65, 0x73, 0x2f, 0x73, 0x63, 0x68, 0x65, 0x6d, 0x61, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x12, 0x0a, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x22, 0x22, 0x0a, 0x0c,
-	0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x12, 0x0a, 0x04,
-	0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65,
-	0x22, 0x26, 0x0a, 0x0a, 0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x12, 0x18,
-	0x0a, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
-	0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x32, 0x49, 0x0a, 0x07, 0x47, 0x72, 0x65, 0x65,
-	0x74, 0x65, 0x72, 0x12, 0x3e, 0x0a, 0x08, 0x53, 0x61, 0x79, 0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x12,
-	0x18, 0x2e, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x2e, 0x48, 0x65, 0x6c,
-	0x6c, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x68, 0x65, 0x6c, 0x6c,
-	0x6f, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x2e, 0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x52, 0x65, 0x70, 0x6c,
-	0x79, 0x22, 0x00, 0x42, 0x28, 0x5a, 0x26, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f,
-	0x6d, 0x2f, 0x6c, 0x61, 0x7a, 0x7a, 0x79, 0x74, 0x63, 0x68, 0x69, 0x6b, 0x2f, 0x66, 0x69, 0x6e,
-	0x61, 0x6e, 0x63, 0x65, 0x2d, 0x61, 0x70, 0x69, 0x2f, 0x67, 0x72, 0x70, 0x63, 0x62, 0x06, 0x70,
-	0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x12, 0x0a, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x22, 0xa5, 0x01, 0x0a,
+	0x10, 0x49, 0x6e, 0x63, 0x6f, 0x6d, 0x65, 0x41, 0x64, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x12, 0x3d, 0x0a, 0x0b, 0x63, 0x61, 0x74, 0x65, 0x67, 0x6f, 0x72, 0x79, 0x5f, 0x69, 0x64,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x1c, 0x2e, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x77, 0x6f,
+	0x72, 0x6c, 0x64, 0x2e, 0x49, 0x6e, 0x63, 0x6f, 0x6d, 0x65, 0x43, 0x61, 0x74, 0x65, 0x67, 0x6f,
+	0x72, 0x79, 0x49, 0x64, 0x52, 0x0a, 0x63, 0x61, 0x74, 0x65, 0x67, 0x6f, 0x72, 0x79, 0x49, 0x64,
+	0x12, 0x14, 0x0a, 0x05, 0x74, 0x69, 0x74, 0x6c, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x05, 0x74, 0x69, 0x74, 0x6c, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x73, 0x75, 0x6d, 0x18, 0x03, 0x20,
+	0x01, 0x28, 0x01, 0x52, 0x03, 0x73, 0x75, 0x6d, 0x12, 0x12, 0x0a, 0x04, 0x64, 0x61, 0x74, 0x65,
+	0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x64, 0x61, 0x74, 0x65, 0x12, 0x16, 0x0a, 0x06,
+	0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x61, 0x75,
+	0x74, 0x68, 0x6f, 0x72, 0x22, 0x2a, 0x0a, 0x0e, 0x49, 0x6e, 0x63, 0x6f, 0x6d, 0x65, 0x41, 0x64,
+	0x64, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x12, 0x18, 0x0a, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67,
+	0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65,
+	0x22, 0xa4, 0x01, 0x0a, 0x0f, 0x53, 0x70, 0x65, 0x6e, 0x64, 0x41, 0x64, 0x64, 0x52, 0x65, 0x71,
+	0x75, 0x65, 0x73, 0x74, 0x12, 0x3d, 0x0a, 0x0b, 0x63, 0x61, 0x74, 0x65, 0x67, 0x6f, 0x72, 0x79,
+	0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x1c, 0x2e, 0x68, 0x65, 0x6c, 0x6c,
+	0x6f, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x2e, 0x42, 0x75, 0x64, 0x67, 0x65, 0x74, 0x43, 0x61, 0x74,
+	0x65, 0x67, 0x6f, 0x72, 0x79, 0x49, 0x64, 0x52, 0x0a, 0x63, 0x61, 0x74, 0x65, 0x67, 0x6f, 0x72,
+	0x79, 0x49, 0x64, 0x12, 0x14, 0x0a, 0x05, 0x74, 0x69, 0x74, 0x6c, 0x65, 0x18, 0x02, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x05, 0x74, 0x69, 0x74, 0x6c, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x73, 0x75, 0x6d,
+	0x18, 0x03, 0x20, 0x01, 0x28, 0x01, 0x52, 0x03, 0x73, 0x75, 0x6d, 0x12, 0x12, 0x0a, 0x04, 0x64,
+	0x61, 0x74, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x64, 0x61, 0x74, 0x65, 0x12,
+	0x16, 0x0a, 0x06, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x06, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x22, 0x29, 0x0a, 0x0d, 0x53, 0x70, 0x65, 0x6e, 0x64,
+	0x41, 0x64, 0x64, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x12, 0x18, 0x0a, 0x07, 0x6d, 0x65, 0x73, 0x73,
+	0x61, 0x67, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61,
+	0x67, 0x65, 0x22, 0x4f, 0x0a, 0x10, 0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x53, 0x74, 0x61, 0x74, 0x52,
+	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x12, 0x0a, 0x04, 0x79, 0x65, 0x61, 0x72, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x03, 0x52, 0x04, 0x79, 0x65, 0x61, 0x72, 0x12, 0x27, 0x0a, 0x05, 0x6d, 0x6f,
+	0x6e, 0x74, 0x68, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x11, 0x2e, 0x68, 0x65, 0x6c, 0x6c,
+	0x6f, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x2e, 0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x52, 0x05, 0x6d, 0x6f,
+	0x6e, 0x74, 0x68, 0x22, 0x2a, 0x0a, 0x0e, 0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x53, 0x74, 0x61, 0x74,
+	0x52, 0x65, 0x70, 0x6c, 0x79, 0x12, 0x18, 0x0a, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x2a,
+	0x5d, 0x0a, 0x10, 0x49, 0x6e, 0x63, 0x6f, 0x6d, 0x65, 0x43, 0x61, 0x74, 0x65, 0x67, 0x6f, 0x72,
+	0x79, 0x49, 0x64, 0x12, 0x16, 0x0a, 0x12, 0x4e, 0x4f, 0x5f, 0x49, 0x4e, 0x43, 0x4f, 0x4d, 0x45,
+	0x5f, 0x43, 0x41, 0x54, 0x45, 0x47, 0x4f, 0x52, 0x59, 0x10, 0x00, 0x12, 0x0a, 0x0a, 0x06, 0x53,
+	0x41, 0x4c, 0x41, 0x52, 0x59, 0x10, 0x01, 0x12, 0x0d, 0x0a, 0x09, 0x54, 0x52, 0x41, 0x4e, 0x53,
+	0x46, 0x45, 0x52, 0x53, 0x10, 0x02, 0x12, 0x0b, 0x0a, 0x07, 0x53, 0x45, 0x4c, 0x4c, 0x49, 0x4e,
+	0x47, 0x10, 0x03, 0x12, 0x09, 0x0a, 0x05, 0x47, 0x49, 0x46, 0x54, 0x53, 0x10, 0x04, 0x2a, 0x8c,
+	0x01, 0x0a, 0x10, 0x42, 0x75, 0x64, 0x67, 0x65, 0x74, 0x43, 0x61, 0x74, 0x65, 0x67, 0x6f, 0x72,
+	0x79, 0x49, 0x64, 0x12, 0x17, 0x0a, 0x13, 0x4e, 0x4f, 0x54, 0x5f, 0x42, 0x55, 0x44, 0x47, 0x45,
+	0x54, 0x5f, 0x43, 0x41, 0x54, 0x45, 0x47, 0x4f, 0x52, 0x59, 0x10, 0x00, 0x12, 0x08, 0x0a, 0x04,
+	0x46, 0x4f, 0x4f, 0x44, 0x10, 0x01, 0x12, 0x10, 0x0a, 0x0c, 0x45, 0x4e, 0x54, 0x45, 0x52, 0x54,
+	0x41, 0x49, 0x4d, 0x45, 0x4e, 0x54, 0x10, 0x02, 0x12, 0x0c, 0x0a, 0x08, 0x44, 0x4f, 0x4d, 0x45,
+	0x53, 0x54, 0x49, 0x43, 0x10, 0x03, 0x12, 0x08, 0x0a, 0x04, 0x52, 0x45, 0x4e, 0x54, 0x10, 0x04,
+	0x12, 0x0b, 0x0a, 0x07, 0x4d, 0x4f, 0x52, 0x47, 0x41, 0x47, 0x45, 0x10, 0x05, 0x12, 0x0f, 0x0a,
+	0x0b, 0x48, 0x45, 0x41, 0x4c, 0x54, 0x48, 0x5f, 0x43, 0x41, 0x52, 0x45, 0x10, 0x06, 0x12, 0x0d,
+	0x0a, 0x09, 0x54, 0x52, 0x41, 0x4e, 0x53, 0x50, 0x4f, 0x52, 0x54, 0x10, 0x07, 0x2a, 0xa7, 0x01,
+	0x0a, 0x05, 0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x12, 0x0c, 0x0a, 0x08, 0x4e, 0x4f, 0x5f, 0x4d, 0x4f,
+	0x4e, 0x54, 0x48, 0x10, 0x00, 0x12, 0x0b, 0x0a, 0x07, 0x4a, 0x41, 0x4e, 0x55, 0x41, 0x52, 0x59,
+	0x10, 0x01, 0x12, 0x0c, 0x0a, 0x08, 0x46, 0x45, 0x42, 0x55, 0x52, 0x41, 0x52, 0x59, 0x10, 0x02,
+	0x12, 0x09, 0x0a, 0x05, 0x4d, 0x41, 0x52, 0x43, 0x48, 0x10, 0x03, 0x12, 0x09, 0x0a, 0x05, 0x41,
+	0x50, 0x52, 0x49, 0x4c, 0x10, 0x04, 0x12, 0x07, 0x0a, 0x03, 0x4d, 0x41, 0x59, 0x10, 0x05, 0x12,
+	0x08, 0x0a, 0x04, 0x4a, 0x55, 0x4e, 0x45, 0x10, 0x06, 0x12, 0x08, 0x0a, 0x04, 0x4a, 0x55, 0x4c,
+	0x59, 0x10, 0x07, 0x12, 0x0a, 0x0a, 0x06, 0x41, 0x55, 0x47, 0x55, 0x53, 0x54, 0x10, 0x08, 0x12,
+	0x0d, 0x0a, 0x09, 0x53, 0x45, 0x50, 0x54, 0x45, 0x4d, 0x42, 0x45, 0x52, 0x10, 0x09, 0x12, 0x0b,
+	0x0a, 0x07, 0x4f, 0x43, 0x54, 0x4f, 0x42, 0x45, 0x52, 0x10, 0x0a, 0x12, 0x0c, 0x0a, 0x08, 0x4e,
+	0x4f, 0x56, 0x45, 0x4d, 0x42, 0x45, 0x52, 0x10, 0x0b, 0x12, 0x0c, 0x0a, 0x08, 0x44, 0x45, 0x43,
+	0x45, 0x4d, 0x42, 0x45, 0x52, 0x10, 0x0c, 0x32, 0xe2, 0x01, 0x0a, 0x08, 0x46, 0x69, 0x6e, 0x61,
+	0x6e, 0x63, 0x65, 0x73, 0x12, 0x47, 0x0a, 0x09, 0x49, 0x6e, 0x63, 0x6f, 0x6d, 0x65, 0x41, 0x64,
+	0x64, 0x12, 0x1c, 0x2e, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x2e, 0x49,
+	0x6e, 0x63, 0x6f, 0x6d, 0x65, 0x41, 0x64, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
+	0x1a, 0x2e, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x2e, 0x49, 0x6e, 0x63,
+	0x6f, 0x6d, 0x65, 0x41, 0x64, 0x64, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x12, 0x44, 0x0a,
+	0x08, 0x53, 0x70, 0x65, 0x6e, 0x64, 0x41, 0x64, 0x64, 0x12, 0x1b, 0x2e, 0x68, 0x65, 0x6c, 0x6c,
+	0x6f, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x2e, 0x53, 0x70, 0x65, 0x6e, 0x64, 0x41, 0x64, 0x64, 0x52,
+	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x19, 0x2e, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x77, 0x6f,
+	0x72, 0x6c, 0x64, 0x2e, 0x53, 0x70, 0x65, 0x6e, 0x64, 0x41, 0x64, 0x64, 0x52, 0x65, 0x70, 0x6c,
+	0x79, 0x22, 0x00, 0x12, 0x47, 0x0a, 0x09, 0x4d, 0x6f, 0x6e, 0x74, 0x68, 0x53, 0x74, 0x61, 0x74,
+	0x12, 0x1c, 0x2e, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x2e, 0x4d, 0x6f,
+	0x6e, 0x74, 0x68, 0x53, 0x74, 0x61, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1a,
+	0x2e, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x77, 0x6f, 0x72, 0x6c, 0x64, 0x2e, 0x4d, 0x6f, 0x6e, 0x74,
+	0x68, 0x53, 0x74, 0x61, 0x74, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x42, 0x28, 0x5a, 0x26,
+	0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6c, 0x61, 0x7a, 0x7a, 0x79,
+	0x74, 0x63, 0x68, 0x69, 0x6b, 0x2f, 0x66, 0x69, 0x6e, 0x61, 0x6e, 0x63, 0x65, 0x2d, 0x61, 0x70,
+	0x69, 0x2f, 0x67, 0x72, 0x70, 0x63, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -149,19 +670,34 @@ func file_protobuf_finances_schema_proto_rawDescGZIP() []byte {
 	return file_protobuf_finances_schema_proto_rawDescData
 }
 
-var file_protobuf_finances_schema_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_protobuf_finances_schema_proto_enumTypes = make([]protoimpl.EnumInfo, 3)
+var file_protobuf_finances_schema_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_protobuf_finances_schema_proto_goTypes = []any{
-	(*HelloRequest)(nil), // 0: helloworld.HelloRequest
-	(*HelloReply)(nil),   // 1: helloworld.HelloReply
+	(IncomeCategoryId)(0),    // 0: helloworld.IncomeCategoryId
+	(BudgetCategoryId)(0),    // 1: helloworld.BudgetCategoryId
+	(Month)(0),               // 2: helloworld.Month
+	(*IncomeAddRequest)(nil), // 3: helloworld.IncomeAddRequest
+	(*IncomeAddReply)(nil),   // 4: helloworld.IncomeAddReply
+	(*SpendAddRequest)(nil),  // 5: helloworld.SpendAddRequest
+	(*SpendAddReply)(nil),    // 6: helloworld.SpendAddReply
+	(*MonthStatRequest)(nil), // 7: helloworld.MonthStatRequest
+	(*MonthStatReply)(nil),   // 8: helloworld.MonthStatReply
 }
 var file_protobuf_finances_schema_proto_depIdxs = []int32{
-	0, // 0: helloworld.Greeter.SayHello:input_type -> helloworld.HelloRequest
-	1, // 1: helloworld.Greeter.SayHello:output_type -> helloworld.HelloReply
-	1, // [1:2] is the sub-list for method output_type
-	0, // [0:1] is the sub-list for method input_type
-	0, // [0:0] is the sub-list for extension type_name
-	0, // [0:0] is the sub-list for extension extendee
-	0, // [0:0] is the sub-list for field type_name
+	0, // 0: helloworld.IncomeAddRequest.category_id:type_name -> helloworld.IncomeCategoryId
+	1, // 1: helloworld.SpendAddRequest.category_id:type_name -> helloworld.BudgetCategoryId
+	2, // 2: helloworld.MonthStatRequest.month:type_name -> helloworld.Month
+	3, // 3: helloworld.Finances.IncomeAdd:input_type -> helloworld.IncomeAddRequest
+	5, // 4: helloworld.Finances.SpendAdd:input_type -> helloworld.SpendAddRequest
+	7, // 5: helloworld.Finances.MonthStat:input_type -> helloworld.MonthStatRequest
+	4, // 6: helloworld.Finances.IncomeAdd:output_type -> helloworld.IncomeAddReply
+	6, // 7: helloworld.Finances.SpendAdd:output_type -> helloworld.SpendAddReply
+	8, // 8: helloworld.Finances.MonthStat:output_type -> helloworld.MonthStatReply
+	6, // [6:9] is the sub-list for method output_type
+	3, // [3:6] is the sub-list for method input_type
+	3, // [3:3] is the sub-list for extension type_name
+	3, // [3:3] is the sub-list for extension extendee
+	0, // [0:3] is the sub-list for field type_name
 }
 
 func init() { file_protobuf_finances_schema_proto_init() }
@@ -171,7 +707,7 @@ func file_protobuf_finances_schema_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_protobuf_finances_schema_proto_msgTypes[0].Exporter = func(v any, i int) any {
-			switch v := v.(*HelloRequest); i {
+			switch v := v.(*IncomeAddRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -183,7 +719,55 @@ func file_protobuf_finances_schema_proto_init() {
 			}
 		}
 		file_protobuf_finances_schema_proto_msgTypes[1].Exporter = func(v any, i int) any {
-			switch v := v.(*HelloReply); i {
+			switch v := v.(*IncomeAddReply); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_protobuf_finances_schema_proto_msgTypes[2].Exporter = func(v any, i int) any {
+			switch v := v.(*SpendAddRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_protobuf_finances_schema_proto_msgTypes[3].Exporter = func(v any, i int) any {
+			switch v := v.(*SpendAddReply); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_protobuf_finances_schema_proto_msgTypes[4].Exporter = func(v any, i int) any {
+			switch v := v.(*MonthStatRequest); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_protobuf_finances_schema_proto_msgTypes[5].Exporter = func(v any, i int) any {
+			switch v := v.(*MonthStatReply); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -200,13 +784,14 @@ func file_protobuf_finances_schema_proto_init() {
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_protobuf_finances_schema_proto_rawDesc,
-			NumEnums:      0,
-			NumMessages:   2,
+			NumEnums:      3,
+			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
 		GoTypes:           file_protobuf_finances_schema_proto_goTypes,
 		DependencyIndexes: file_protobuf_finances_schema_proto_depIdxs,
+		EnumInfos:         file_protobuf_finances_schema_proto_enumTypes,
 		MessageInfos:      file_protobuf_finances_schema_proto_msgTypes,
 	}.Build()
 	File_protobuf_finances_schema_proto = out.File
